@@ -37,12 +37,12 @@ for line in raw:
 	else:
 		victory = 0
 
-	id_array = [0] * 224
+	id_array = [0] * 226
 	for i, hero in enumerate(heroes):
 		if i < 5:
 			id_array[hero-1] = 1
 		else:
-			id_array[hero-1 + 112] = 1
+			id_array[hero-1 + 113] = 1
 
 	csv_line = id_array + [victory]
 	output.writerow(csv_line)

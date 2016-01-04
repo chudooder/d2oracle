@@ -30,8 +30,8 @@ def preprocess(data_path, test_set_size):
 
 	data = numpy.genfromtxt(data_path, delimiter=',')
 
-	X = data[:,:224]
-	y = data[:,224:]
+	X = data[:,:226]
+	y = data[:,226:]
 
 	# shuffle then split X and y
 	unison_shuffle(X, y)
