@@ -10,6 +10,7 @@ from sklearn.svm import SVC
 from sklearn.svm import LinearSVC
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.tree import DecisionTreeClassifier
+from sklearn.naive_bayes import BernoulliNB, MultinomialNB
 from sklearn import metrics
 
 def unison_shuffle(a, b):
@@ -55,7 +56,9 @@ def train(X, y):
 
 	# model = GradientBoostingClassifier()
 	# model = SVC()
-	model = LinearSVC(penalty='l2', loss='squared_hinge', C=2)
+	# model = LinearSVC(penalty='l2', loss='squared_hinge', C=2)
+	# model = BernoulliNB()
+	model = MultinomialNB()
 	# model = KNeighborsClassifier(n_neighbors=5)
 	# model = DecisionTreeClassifier(random_state=0)
 	model.fit(X, y)

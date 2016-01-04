@@ -22,10 +22,10 @@ for i in range(0, 5):
 
 heroes = [0] * 224
 for hero in radiant_heroes:
-	heroes[hero] = 1
+	heroes[hero-1] = 1
 
 for hero in dire_heroes:
-	heroes[hero+112] = 1
+	heroes[hero-1+112] = 1
 
 predictions = model.predict(heroes)
 print(predictions)
